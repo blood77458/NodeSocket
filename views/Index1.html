@@ -1,7 +1,7 @@
 <html>
 <head>
     <script type="text/javascript">
-        var host = '127.0.0.1';
+        var host = '172.96.220.45';
         var port = 8001;
         var url = 'ws://'+host+':'+port+'/';
 
@@ -21,7 +21,8 @@
         function send(){
             var talk = $('talk');
             var nike = $('nike');
-
+            var chatBox = $('chat-box');
+            chatBox.innerHTML = chatBox.innerHTML+nike.value+':'+talk.value+'<br/>';
             w.send(nike.value+':'+talk.value);
         }
         function $(id){
